@@ -41,9 +41,15 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 app.state.limiter = front_end_limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
+origins = [
+    "https://www.tech-40435.bubbleapps.io",
+    "https://www.sircularity.io/*",
+    "https://tech-40435.bubbleapps.io/"
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow only this origin
+    allow_origins=origins,  # Allow only this origin
     allow_credentials=True,
     allow_methods=["GET", "POST"],  # Allow only GET and POST methods
     allow_headers=["Authorization", "Content-Type"],
