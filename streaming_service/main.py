@@ -43,8 +43,10 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 origins = [
     "https://www.tech-40435.bubbleapps.io",
+    "https://tech-40435.bubbleapps.io",
     "https://www.sircularity.io/*",
-    "https://tech-40435.bubbleapps.io/"
+    "https://tech-40435.bubbleapps.io/",
+    "https://sircularity.io"
 ]
 
 app.add_middleware(
