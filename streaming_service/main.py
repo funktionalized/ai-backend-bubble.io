@@ -51,10 +51,10 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,  # Allow only this origin
+    allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["GET", "POST"],  # Allow only GET and POST methods
-    allow_headers=["Authorization", "Content-Type"],
+    allow_methods=["*"],  # Allow all methods including OPTIONS for preflight requests
+    allow_headers=["*"],  # Allow all headers
 )
 
 BUBBLE_API_URL = os.getenv("BUBBLE_API_URL", None)
