@@ -46,7 +46,11 @@ origins = [
     "https://tech-40435.bubbleapps.io",
     "https://www.sircularity.io/*",
     "https://tech-40435.bubbleapps.io/",
-    "https://sircularity.io"
+    "https://sircularity.io",
+    "https://firstbuild.dev",
+    "https://firstbuild.dev/*",
+    "https://www.firstbuild.dev",
+    "https://www.firstbuild.dev/*"
 ]
 
 app.add_middleware(
